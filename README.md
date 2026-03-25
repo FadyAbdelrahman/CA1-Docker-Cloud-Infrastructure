@@ -1,44 +1,30 @@
-# Docker Getting Started Tutorial
+# CA1 - Cloud Infrastructure & Virtualisation (Docker Project)
+**Student Name:** Fady Abdelrahman Mohamed  
+**Student ID:** 20053593  
+**Lecturer:** Paul Laird  
+**Academic Year:** 2025/2026
 
-This tutorial was written with the intent of helping folks get up and running
-with containers and is designed to work with Docker Desktop. While not going too much 
-into depth, it covers the following topics:
+## Project Overview
+This repository contains the practical implementation for the CA1 assignment. The goal of this project was to demonstrate proficiency in containerization using Docker and deploying a multi-container application on Google Cloud Platform (GCP).
 
-- Running your first container
-- Building containers
-- Learning what containers are
-- Running and removing containers
-- Using volumes to persist data
-- Using bind mounts to support development
-- Using container networking to support multi-container applications
-- Using Docker Compose to simplify the definition and sharing of applications
-- Using image layer caching to speed up builds and reduce push/pull size
-- Using multi-stage builds to separate build-time and runtime dependencies
+## Technologies Used
+* **Docker:** For containerizing the application.
+* **Docker Compose:** To manage multi-container setups (App + Database).
+* **Google Cloud (GCP):** Hosted on a Compute Engine VM instance.
+* **Python/Node.js:** Core application environment.
+* **MySQL:** Persistent database storage.
 
-## Getting Started
+## Key Features Implemented
+1. **Dockerfile Configuration:** Created a custom Dockerfile with optimized layers.
+2. **Data Persistence:** Implemented Docker Volumes to ensure data (Todos) is saved even after containers restart.
+3. **Docker Networking:** Configured a private bridge network for secure communication between the app and the database.
+4. **Automation with Compose:** Defined the entire infrastructure in a `docker-compose.yml` file for one-command deployment.
+5. **Cloud Deployment:** Successfully deployed and tested the application on a public IP address using GCP.
 
-If you wish to run the tutorial, you can use the following command after installing Docker Desktop:
+## How to Run the Project
+To run this project on your local machine or a VM, follow these steps:
 
-```bash
-docker run -d -p 80:80 docker/getting-started
-```
-
-Once it has started, you can open your browser to [http://localhost](http://localhost).
-
-## Development
-
-This project has a `docker-compose.yml` file, which will start the mkdocs application on your
-local machine and help you see changes instantly.
-
-```bash
-docker compose up
-```
-
-## Contributing
-
-If you find typos or other issues with the tutorial, feel free to create a PR and suggest fixes!
-
-If you have ideas on how to make the tutorial better or want to suggest adding new content, please open an 
-issue first before working on your idea. While we love input, we want to keep the tutorial scoped to new-comers.
-As such, we may reject ideas for more advanced requests and don't want you to lose any work you might
-have done. So, ask first and we'll gladly hear your thoughts!
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/FadyAbdelrahman/CA1-Docker-Cloud-Infrastructure.git](https://github.com/FadyAbdelrahman/CA1-Docker-Cloud-Infrastructure.git)
+   cd CA1-Docker-Cloud-Infrastructure
